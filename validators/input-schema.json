@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["plateau", "rovers"],
+    "properties": {
+        "plateau": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "rovers": {
+            "type": "array",
+            "items": {
+                "type":"object",
+                "required": ["name", "Landing", "Instructions"],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "Landing": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "Instructions": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

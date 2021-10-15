@@ -1,0 +1,44 @@
+{
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "description": "Browze Challange",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest tests/*.test.js",
+    "format": "prettier --write \"./**/*.{js, json}\""
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulg/Mars-Rover.git"
+  },
+  "files": [
+    "index.js",
+    "utils/*",
+    "/*"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "author": "Uche Njoku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdulg/Mars-Rover/issues"
+  },
+  "homepage": "https://github.com/abdulg/Mars-Rover#readme",
+  "dependencies": {
+    "ajv": "^8.6.3",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-search-and-replace": "^1.1.0",
+    "babel-runtime": "^6.26.0",
+    "jest": "^27.2.5"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.23",
+    "babel-jest": "^27.2.5"
+  }
+}
