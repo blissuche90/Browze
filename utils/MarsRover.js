@@ -12,7 +12,7 @@ export default class MarsRover {
 		this.instructions = instructions
 		// instructions can only be executed once
 		this.instructionsExecuted = false
-
+        //validate data semantics
 		const errors = []
 		if (this.x > this.xMax || this.x < 0) {
 			errors.push(`currentPosition x: ${this.x} is off the grid!`)
@@ -100,6 +100,9 @@ export default class MarsRover {
 				this.x += 1
 				break
 		}
+	}
+	verifyStatus(){
+
 	}
 
 	get location() {
