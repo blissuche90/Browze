@@ -73,29 +73,33 @@ export default class MarsRover {
 			case 'N':
 				if (this.y + 1 > this.yMax) {
 					// if the rover is on the edge, we won't want to execute the same instruction again
-					this.instructionsExecuted = true
-					throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
+					this.instructionsExecuted = true;
+					break;
+					//throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
 				}
 				this.y += 1
 				break
 			case 'W':
 				if (this.x - 1 < this.xMin) {
-					this.instructionsExecuted = true
-					throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
+					this.instructionsExecuted = true;
+					break;
+					//throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
 				}
 				this.x -= 1
 				break
 			case 'S':
 				if (this.y - 1 < this.yMin) {
-					this.instructionsExecuted = true
-					throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
+					this.instructionsExecuted = true;
+					break;
+					//throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
 				}
 				this.y -= 1
 				break
 			case 'E':
 				if (this.x + 1 > this.xMax) {
-					this.instructionsExecuted = true
-					throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
+					this.instructionsExecuted = true;
+					break;
+					//throw new Error(`Abort Max point reached! ${this.name} will fall off the Plateau`)
 				}
 				this.x += 1
 				break

@@ -19,10 +19,20 @@ describe('Mars Rover', () => {
       //doesnt move
       expect(marsRover.location).toEqual("Rover1: 2 2 N")
     })
-
+    /*
     test('given an instruction that moves the rover off the grid', () => {
       const marsRover = new MarsRover("Rover1", [ '5', '5', 'N' ], [] , ['5', '5']);
       expect(() => marsRover.moveForward()).toThrow('Abort Max point reached! Rover1 will fall off the Plateau')
+    })*/
+    test('given an instruction that moves the rover off the grid', () => {
+      const marsRover = new MarsRover("Rover1", [ '5', '5', 'N' ], ['M'] , ['5', '5']);
+      marsRover.executeInstructions();
+      expect(marsRover.location).toEqual("Rover1: 5 5 N")
+    })
+    test('given an instruction that moves the rover off the grid and another added instruction', () => {
+      const marsRover = new MarsRover("Rover1", [ '5', '5', 'N' ], ['M','L'] , ['5', '5']);
+      marsRover.executeInstructions();
+      expect(marsRover.location).toEqual("Rover1: 5 5 W")
     })
   })
 

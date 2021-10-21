@@ -8,7 +8,7 @@ function processManager({ plateau, rovers }) {
     });
     marsRoversData.forEach(rover => {       
         try {
-            rover.executeInstructions();
+            rover.executeInstructions();          
         } catch (error) {
             // If a rover is about to fall over cliff, operation is halted, but doesn't block other rovers from moving
             console.error(error)
