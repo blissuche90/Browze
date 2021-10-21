@@ -112,6 +112,9 @@ export default class MarsRover {
 	get location() {
 		return `${this.name}: ${this.x} ${this.y} ${this.facing}`
 	}
+	get getLanding() {
+		return ` ${this.x} ${this.y}`
+	}
 
 	executeInstructions() {
 		// can throw and error in future if instructions are executed twice

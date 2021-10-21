@@ -9,6 +9,7 @@ const main = async () => {
 	const [node, script, fileLocation] = process.argv;
 	validateFileType(fileLocation);
 	const roverConfiguration = await inputFileToJson(fileLocation)
+	console.log("RoverConfig==========>",roverConfiguration);
 	const finalRoverLocationData = roverManager(roverConfiguration)
 	finalRoverLocationData.forEach(locationData => console.log(locationData))
 };

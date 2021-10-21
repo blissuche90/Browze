@@ -1,4 +1,5 @@
 import MarsRover  from '../utils/MarsRover'
+import RoverManager  from '../utils/processManager'
 
 describe('Mars Rover', () => {
   describe('errors when', () => {
@@ -47,6 +48,17 @@ describe('Mars Rover', () => {
       const marsRover = new MarsRover("Rover2", [ '3', '3', 'E' ], ['M','M','R','M','M','R','M','R','R','M'] , ['5', '5']);
       marsRover.executeInstructions();
       expect(marsRover.location).toEqual("Rover2: 5 1 E")
+    })
+
+    test('outputs the correct position after a rover with same location lands', () => {
+      const manager = new RoverManager({
+        plateau: [ '5', '5' ],
+        rovers: [
+          { name: 'Rover1', Landing: [ '1', '2', 'N' ], Instructions: ['L', 'M', 'L','M', 'L', 'M','L', 'M', 'M'] },
+          { name: 'Rover2', Landing: [ '1', '3', 'W' ], Instructions: ['L', 'M', 'L','M', 'L', 'M','L', 'M', 'M'] }
+        ]
+      });
+      expect(manager).toEqual(["Rover1: 1 3 N"])
     })
   })
 })

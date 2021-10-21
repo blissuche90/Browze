@@ -64,3 +64,9 @@ This is application uses the supplied text file as an input that can be modified
 To run Test
 
 # npm test
+
+
+
+
+# If Rover is to Land on a location of another ROver, then it should not land, Rover Lost
+# If the Rover tries to move into a spot of another rover it should ignore move
